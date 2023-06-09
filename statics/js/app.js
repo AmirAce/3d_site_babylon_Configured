@@ -1,12 +1,12 @@
 import "@babylonjs/core/Debug/debugLayer";
 import "@babylonjs/gui/2D";
 import "@babylonjs/inspector";
-import "@babylonjs/loaders/";
+// import "@babylonjs/loaders/gltf";
 import "@babylonjs/gui";
 import * as GUI from 'babylonjs-gui';
 import {Engine, Scene, ArcRotateCamera, Vector3, HemisphericLight, MeshBuilder, SceneLoader} from "@babylonjs/core";
 
-class app {
+class App {
     constructor() {
         const canvas = document.createElement("canvas");
         canvas.style.width = "100%";
@@ -38,8 +38,8 @@ class app {
         //
         //     alert("you did it!");
         // });
-        const advancedTexture = BABYLON.GUI.AdvancedDynamicTexture.CreateFullscreenUI("myUI");
-        await advancedTexture.parseFromSnippetAsync("I59XFB#11");
+        // const advancedTexture = BABYLON.GUI.AdvancedDynamicTexture.CreateFullscreenUI("myUI");
+        // await advancedTexture.parseFromSnippetAsync("I59XFB#11");
         // advancedTexture.addControl(button1);
 
         return this.scene;
@@ -47,7 +47,7 @@ class app {
 }
 
 let myApp;
-myApp = new app();
+myApp = new App();
 const scene = await myApp.createScene();
 
 
